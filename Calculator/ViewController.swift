@@ -12,9 +12,16 @@ import UIKit
 
 class ViewController: UIViewController {
 	
+	override func viewDidLoad() {
+		view.backgroundColor = defaultColor
+	}
+	
+	// MARK: Variables
 	@IBOutlet weak var display: UILabel!
 	
 	let PI = 3.14159265359
+	let flashColor = UIColor.lightGrayColor()
+	let defaultColor = UIColor.init(colorLiteralRed: 215, green: 220, blue: 231, alpha: 1)
 	var userIsTypingANumber = false
 	var operandStack = Array<Double>()
 	var displayValue: Double {
@@ -27,9 +34,11 @@ class ViewController: UIViewController {
 		}
 	}
 	
+	// MARK: IBActions
 	@IBAction func appendDigit(sender: UIButton) {
 		let digit = sender.currentTitle!
 		if display.text!.containsString(".") && digit == "." {
+			// Do Nothing
 		} else {
 			if userIsTypingANumber {
 				display.text! += digit
@@ -41,10 +50,14 @@ class ViewController: UIViewController {
 	}
 	//
 	@IBAction func appendPI(sender: UIButton) {
-		if !userIsTypingANumber {
+		if userIsTypingANumber {
+			displayValue = PI * NSNumberFormatter().numberFromString(display.text!)!.doubleValue
+			enter()
+		} else {
 			display.text! = String(PI)
-			userIsTypingANumber = true
+			enter()
 		}
+		backgroundFlash()
 	}
 	//
 	@IBAction func operate(sender: UIButton) {
@@ -72,6 +85,7 @@ class ViewController: UIViewController {
 		case "cos": singleOperation {cos($0*self.PI/180)}
 		default: break
 		}
+		backgroundFlash()
 	}
 	//
 	@IBAction func enter() {
@@ -82,14 +96,17 @@ class ViewController: UIViewController {
 			operandStack.append(displayValue)
 		}
 		print("operand Stack = \(operandStack)")
+		backgroundFlash()
 	}
 	//
 	@IBAction func resetButtonPressed() {
 		display.text = "0"
 		operandStack = []
-		
+		userIsTypingANumber = false
+		backgroundFlash()
 	}
-	//
+	
+	// MARK: Functions
 	func dualOperation(operation: (Double, Double) -> Double) {
 		if operandStack.count >= 2 {
 			displayValue = operation(operandStack.removeLast(),  operandStack.removeLast())
@@ -107,6 +124,15 @@ class ViewController: UIViewController {
 	func errorReset() {
 		display.text = "Error"
 		operandStack = [0]
+	}
+	//
+	func backgroundFlash() {
+		view.backgroundColor = flashColor
+		NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: #selector(ViewController.changeToOriginalColor), userInfo: nil, repeats: false)
+	}
+	//
+	func changeToOriginalColor() {
+		view.backgroundColor = defaultColor
 	}
 }
 
