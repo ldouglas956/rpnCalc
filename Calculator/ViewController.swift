@@ -14,7 +14,7 @@ class ViewController: UIViewController {
 	
 	@IBOutlet weak var display: UILabel!
 	
-	let PI = 3.14159
+	let PI = 3.14159265359
 	var userIsTypingANumber = false
 	var operandStack = Array<Double>()
 	var displayValue: Double {

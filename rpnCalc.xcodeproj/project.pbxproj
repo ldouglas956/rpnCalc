@@ -38,7 +38,7 @@
 		8E186CC51CC81E800058F799 = {
 			isa = PBXGroup;
 			children = (
-				8E186CD01CC81E800058F799 /* Calculator */,
+				8E186CD01CC81E800058F799 /* rpnCalc */,
 				8E186CCF1CC81E800058F799 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,13 +51,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8E186CD01CC81E800058F799 /* Calculator */ = {
+		8E186CD01CC81E800058F799 /* rpnCalc */ = {
 			isa = PBXGroup;
 			children = (
 				8E186CD31CC81E800058F799 /* ViewController.swift */,
 				8E186CD51CC81E800058F799 /* Main.storyboard */,
 				8E186CE31CC81EE90058F799 /* Supporting Files */,
 			);
+			name = rpnCalc;
 			path = Calculator;
 			sourceTree = "<group>";
 		};
