@@ -15,7 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8E186CCE1CC81E800058F799 /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E186CCE1CC81E800058F799 /* rpnCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rpnCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E186CD11CC81E800058F799 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E186CD31CC81E800058F799 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8E186CD61CC81E800058F799 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -46,7 +46,7 @@
 		8E186CCF1CC81E800058F799 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8E186CCE1CC81E800058F799 /* Calculator.app */,
+				8E186CCE1CC81E800058F799 /* rpnCalc.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -75,9 +75,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8E186CCD1CC81E800058F799 /* Calculator */ = {
+		8E186CCD1CC81E800058F799 /* rpnCalc */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8E186CE01CC81E800058F799 /* Build configuration list for PBXNativeTarget "Calculator" */;
+			buildConfigurationList = 8E186CE01CC81E800058F799 /* Build configuration list for PBXNativeTarget "rpnCalc" */;
 			buildPhases = (
 				8E186CCA1CC81E800058F799 /* Sources */,
 				8E186CCB1CC81E800058F799 /* Frameworks */,
@@ -87,9 +87,9 @@
 			);
 			dependencies = (
 			);
-			name = Calculator;
+			name = rpnCalc;
 			productName = Calculator;
-			productReference = 8E186CCE1CC81E800058F799 /* Calculator.app */;
+			productReference = 8E186CCE1CC81E800058F799 /* rpnCalc.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -107,7 +107,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8E186CC91CC81E800058F799 /* Build configuration list for PBXProject "Calculator" */;
+			buildConfigurationList = 8E186CC91CC81E800058F799 /* Build configuration list for PBXProject "rpnCalc" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -120,7 +120,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8E186CCD1CC81E800058F799 /* Calculator */,
+				8E186CCD1CC81E800058F799 /* rpnCalc */,
 			);
 		};
 /* End PBXProject section */
@@ -262,7 +262,7 @@
 				INFOPLIST_FILE = Calculator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.LanceDouglas.Calculator;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = rpnCalc;
 			};
 			name = Debug;
 		};
@@ -273,14 +273,14 @@
 				INFOPLIST_FILE = Calculator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.LanceDouglas.Calculator;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = rpnCalc;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8E186CC91CC81E800058F799 /* Build configuration list for PBXProject "Calculator" */ = {
+		8E186CC91CC81E800058F799 /* Build configuration list for PBXProject "rpnCalc" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8E186CDE1CC81E800058F799 /* Debug */,
@@ -289,7 +289,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8E186CE01CC81E800058F799 /* Build configuration list for PBXNativeTarget "Calculator" */ = {
+		8E186CE01CC81E800058F799 /* Build configuration list for PBXNativeTarget "rpnCalc" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8E186CE11CC81E800058F799 /* Debug */,
