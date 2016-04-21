@@ -296,6 +296,7 @@
 				8E186CE21CC81E800058F799 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
